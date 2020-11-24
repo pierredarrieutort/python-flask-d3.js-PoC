@@ -1,0 +1,19 @@
+{
+  "name": "python-flask-d3.js-poc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "cd py && python flask_server.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierredarrieutort/python-flask-d3.js-PoC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierredarrieutort/python-flask-d3.js-PoC/issues"
+  },
+  "homepage": "https://github.com/pierredarrieutort/python-flask-d3.js-PoC#readme"
+}
