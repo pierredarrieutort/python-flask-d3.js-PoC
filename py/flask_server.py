@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from parseFile import add1AndConvert
 
 
@@ -19,6 +19,11 @@ app = Flask(
 @app.route("/")
 def hello():
     return render_template("main.html")
+
+
+@app.route('/results', methods=['GET', 'POST'])
+def res():
+    return request.form
 
 
 if __name__ == "__main__":
