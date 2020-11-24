@@ -21,9 +21,9 @@ def hello():
     return render_template("main.html")
 
 
-@app.route('/results', methods=['GET', 'POST'])
+@app.route('/results', methods=['POST'])
 def res():
-    return request.form
+    return str(float(request.form['x']) + float(request.form['y']))
 
 
 if __name__ == "__main__":

@@ -11,7 +11,6 @@ class DataTreatment {
 
     loadData() {
         d3.csv(this.filepath).then(data => {
-            console.log(data)
             this.data = data
 
             this.prepareDataDisplay()
@@ -26,7 +25,7 @@ class DataTreatment {
         const form = document.createElement('form')
         form.action = '/results'
         form.method = 'POST'
-        form.className = `formContainer ${i}`
+        form.className = `formContainer-${i}`
 
         const inputX = document.createElement('input')
         inputX.type = 'number'
@@ -57,6 +56,8 @@ class DataTreatment {
                 method: form.method,
                 body: new FormData(form)
             })
+                .then(data => data.text())
+                .then(result => element.parentElement.lastChild.textContent = result)
         })
     }
 }
