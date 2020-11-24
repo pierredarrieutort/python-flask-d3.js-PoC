@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    font-family: sans-serif;
+}
+
+form * {
+    font-size: 1em;
+    line-height: initial;
+}
+
+form p {
+    margin: 0;
+}
+
+[class^=formContainer] {
+    display: flex;
+    gap: 1em;
+}
+
+.input {
+    border: none;
+    border-bottom: .1em solid #333;
+    width: 5em;
+    outline: none;
+    transition: .2s;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    border-bottom-width: .2em;
+}
